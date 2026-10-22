@@ -50,7 +50,7 @@ A human-run connection service, not a load board or marketplace app: the visitor
 
 ## Evidence on Hand
 
-- Photos in `_build/images-src/`: hero trucks at sunset, aerial highway, port containers, warehouse loading, tired driver at roadside (stock/AI-generated scenes, not Skylink's own operations), and a founder portrait whose authenticity as Sara Mohamed is **not confirmed**.
+- Photos in `_build/images-src/`: hero trucks at sunset, aerial highway, port containers, warehouse loading, tired driver at roadside (stock/AI-generated scenes, not Skylink's own operations), and a founder portrait of Sara Mohamed supplied by the owner on 2026-10-22 (replaces an earlier unconfirmed stock-style photo).
 - Founder story text from the owner (About page).
 - **Absent, must not be fabricated:** testimonials, customer or partner names/logos, statistics, years in business. Placeholders stay marked until the owner supplies real ones.
 
