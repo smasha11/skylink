@@ -1,0 +1,47 @@
+<header class="site-header" data-header>
+    <div class="container-sk relative flex h-[var(--sk-header-h)] items-center justify-between gap-4">
+      <a href="{{BASE}}index.html" class="shrink-0" aria-label="Skylink Global Network — home">
+        <!--@ logo -->
+      </a>
+
+      <nav class="absolute left-1/2 hidden -translate-x-1/2 lg:block" aria-label="Main">
+        <ul class="flex items-center gap-2">
+          <li><a class="nav-link" href="{{BASE}}index.html"{{NAV_HOME}}>Home</a></li>
+          <li><a class="nav-link" href="{{BASE}}transport.html"{{NAV_TRANSPORT}}>Transport</a></li>
+          <li><a class="nav-link" href="{{BASE}}trade.html"{{NAV_TRADE}}>Trade</a></li>
+          <li><a class="nav-link" href="{{BASE}}about.html"{{NAV_ABOUT}}>About</a></li>
+          <li><a class="nav-link" href="{{BASE}}contact.html"{{NAV_CONTACT}}>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
+          <i data-icon="sun" class="theme-icon-sun h-5 w-5"></i>
+          <i data-icon="moon" class="theme-icon-moon h-5 w-5"></i>
+        </button>
+        <a class="nav-cta" href="https://wa.me/{{WA_NUMBER}}" target="_blank" rel="noopener" aria-label="WhatsApp Us">
+          <i data-icon="whatsapp"></i><span class="hidden sm:inline">WhatsApp Us</span>
+        </a>
+        <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-sk-black/35 text-sk-white backdrop-blur-md hover:bg-sk-black/55 lg:hidden"
+                aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-menu-toggle>
+          <i data-icon="menu" class="h-6 w-6 js-icon-open"></i>
+          <i data-icon="x" class="hidden h-6 w-6 js-icon-close"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="border-t border-white/10 bg-sk-black/95 backdrop-blur-md lg:hidden" hidden data-menu>
+      <nav class="container-sk pb-6 pt-2" aria-label="Mobile">
+        <ul>
+          <li><a class="mobile-link" href="{{BASE}}index.html"{{NAV_HOME}}>Home <i data-icon="chevron-right" class="h-5 w-5 text-sk-yellow"></i></a></li>
+          <li><a class="mobile-link" href="{{BASE}}transport.html"{{NAV_TRANSPORT}}>Transport <i data-icon="chevron-right" class="h-5 w-5 text-sk-yellow"></i></a></li>
+          <li><a class="mobile-link" href="{{BASE}}trade.html"{{NAV_TRADE}}>Trade <i data-icon="chevron-right" class="h-5 w-5 text-sk-yellow"></i></a></li>
+          <li><a class="mobile-link" href="{{BASE}}about.html"{{NAV_ABOUT}}>About <i data-icon="chevron-right" class="h-5 w-5 text-sk-yellow"></i></a></li>
+          <li><a class="mobile-link" href="{{BASE}}contact.html"{{NAV_CONTACT}}>Contact <i data-icon="chevron-right" class="h-5 w-5 text-sk-yellow"></i></a></li>
+        </ul>
+        <a class="btn btn-wa btn-lg mt-6 w-full" href="https://wa.me/{{WA_NUMBER}}" target="_blank" rel="noopener">
+          <i data-icon="whatsapp"></i> Chat on WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>

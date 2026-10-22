@@ -1,0 +1,91 @@
+<!--META {
+  "file": "contact.html",
+  "nav": "contact",
+  "title": "Contact Skylink Global Network | WhatsApp +254 757 710 635",
+  "description": "Contact Skylink Global Network in Nairobi, Kenya. WhatsApp +254 757 710 635 or Instagram @skylink_global_network for loads, trucks, buyers and suppliers."
+} -->
+    <!-- ============ PAGE HERO ============ -->
+    <section class="relative overflow-hidden bg-sk-black" aria-labelledby="page-title">
+      <div class="container-sk py-14 sm:py-20">
+        <p class="eyebrow text-sk-yellow">Contact</p>
+        <h1 id="page-title" class="h1 mt-4 max-w-3xl">Let's talk <span class="hl">business.</span></h1>
+        <p class="lead mt-5 max-w-xl text-sk-grey-300">WhatsApp is the fastest way to reach us. Send one message with what you need.</p>
+      </div>
+      <div class="chevrons chevrons-faint" aria-hidden="true"></div>
+    </section>
+
+    <section class="section bg-sk-charcoal" aria-label="Contact options and enquiry form">
+      <div class="container-sk grid gap-8 lg:grid-cols-[1fr_1.3fr] lg:gap-12">
+        <div class="space-y-4">
+          <a class="card group flex items-center gap-4 transition hover:border-sk-whatsapp" href="https://wa.me/{{WA_NUMBER}}" target="_blank" rel="noopener">
+            <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-sk-whatsapp text-sk-black"><i data-icon="whatsapp" class="h-7 w-7"></i></span>
+            <span>
+              <span class="eyebrow block text-sk-grey-300">WhatsApp</span>
+              <span class="mt-1 block text-lg font-bold group-hover:text-sk-yellow">{{WA_DISPLAY}}</span>
+            </span>
+          </a>
+          <a class="card group flex items-center gap-4 transition hover:border-sk-yellow" href="{{IG_URL}}" target="_blank" rel="noopener">
+            <span class="icon-circle h-14 w-14"><i data-icon="instagram"></i></span>
+            <span>
+              <span class="eyebrow block text-sk-grey-300">Instagram</span>
+              <span class="mt-1 block break-all text-base font-bold sm:text-lg group-hover:text-sk-yellow">@{{IG_HANDLE}}</span>
+            </span>
+          </a>
+          <!-- PLACEHOLDER: replace info@YOURDOMAIN.com in _build/build.mjs (EMAIL) and rebuild, or edit here -->
+          <a class="card group flex items-center gap-4 transition hover:border-sk-yellow" href="mailto:{{EMAIL}}">
+            <span class="icon-circle h-14 w-14"><i data-icon="mail"></i></span>
+            <span>
+              <span class="eyebrow block text-sk-grey-300">Email</span>
+              <span class="mt-1 block break-all text-base font-bold sm:text-lg group-hover:text-sk-yellow">{{EMAIL}}</span>
+            </span>
+          </a>
+          <div class="card flex items-center gap-4">
+            <span class="icon-circle h-14 w-14"><i data-icon="map-pin"></i></span>
+            <span>
+              <span class="eyebrow block text-sk-grey-300">Location</span>
+              <span class="mt-1 block text-lg font-bold">Nairobi, Kenya</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="rounded-sk bg-sk-white p-5 text-sk-black shadow-sk-lg sm:p-8 on-light">
+          <h2 class="h3">General enquiry</h2>
+          <p class="mt-2 text-sm">Not sure which form to use? Ask us anything here.</p>
+          <form class="mt-6" novalidate data-wa-form="New ENQUIRY">
+            <div class="form-grid">
+              <div class="field">
+                <label class="label" for="g-name">Your name</label>
+                <input class="input" id="g-name" name="name" type="text" autocomplete="name" required data-label="Name" aria-describedby="g-name-err">
+                <p class="error" id="g-name-err"></p>
+              </div>
+              <div class="field">
+                <label class="label" for="g-phone">Phone / WhatsApp</label>
+                <input class="input" id="g-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="07xx xxx xxx or +254…" required data-validate="phone" data-label="Phone" aria-describedby="g-phone-err">
+                <p class="error" id="g-phone-err"></p>
+              </div>
+              <div class="field field-full">
+                <label class="label" for="g-topic">I'm interested in</label>
+                <select class="input" id="g-topic" name="topic" required data-label="Topic" aria-describedby="g-topic-err">
+                  <option value="">Choose one</option>
+                  <option>Finding loads for my truck</option>
+                  <option>Finding a truck for my cargo</option>
+                  <option>Finding suppliers (buyer)</option>
+                  <option>Reaching buyers (supplier)</option>
+                  <option>Something else</option>
+                </select>
+                <p class="error" id="g-topic-err"></p>
+              </div>
+              <div class="field field-full">
+                <label class="label" for="g-message">Message</label>
+                <textarea class="input" id="g-message" name="message" rows="5" required minlength="5" data-label="Message" aria-describedby="g-message-err"></textarea>
+                <p class="error" id="g-message-err"></p>
+              </div>
+            </div>
+            <button class="btn btn-wa btn-lg mt-6 w-full sm:w-auto" type="submit"><i data-icon="whatsapp"></i> Send on WhatsApp</button>
+            <div class="form-note" role="status" hidden data-form-note></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--@ cta -->

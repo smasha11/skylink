@@ -1,0 +1,221 @@
+<!--META {
+  "file": "transport.html",
+  "nav": "transport",
+  "title": "Find Cargo for Your Truck in Kenya | Return Loads | Skylink",
+  "description": "Truck owners: share your route and get matched with loads, plus a return load when available (e.g. Nairobi–Mombasa). Cargo owners: tell us what to move and we connect you with transporters in Kenya."
+} -->
+    <!-- ============ PAGE HERO ============ -->
+    <section class="hero-photo relative isolate overflow-hidden photo-fallback" aria-labelledby="page-title">
+      <img class="absolute inset-0 -z-10 h-full w-full object-cover object-[60%_60%]" src="assets/img/highway-aerial.webp" srcset="assets/img/highway-aerial-800.webp 800w, assets/img/highway-aerial.webp 1600w" sizes="100vw" alt="Aerial view of two container trucks on a highway through the Kenyan savanna at sunset" width="1600" height="900" fetchpriority="high" decoding="async" onerror="this.remove()">
+      <div class="container-sk relative py-14 sm:py-20">
+        <p class="eyebrow text-sk-yellow">Transport · Load matching</p>
+        <h1 id="page-title" class="h1 mt-4 max-w-4xl">Any truck. Any route. <span class="hl">More loads.</span></h1>
+        <p class="lead mt-5 max-w-2xl text-sk-grey-300">Skylink doesn't own trucks. We connect transporters and cargo owners across Kenya, and we look for a return load for your trip back when available.</p>
+        <div class="mt-8 flex flex-wrap gap-2">
+          <span class="badge badge-yellow">Load 1: Nairobi → Mombasa</span>
+          <span class="badge badge-sky">Load 2: Mombasa → Nairobi</span>
+        </div>
+      </div>
+      <div class="chevrons chevrons-faint" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ TABS + FORMS ============ -->
+    <section class="section bg-sk-charcoal" aria-labelledby="forms-title">
+      <div class="container-sk">
+        <h2 id="forms-title" class="sr-only">Send us your request</h2>
+
+        <div class="mx-auto max-w-3xl">
+          <div class="flex gap-2 rounded-2xl border border-white/10 bg-sk-black p-2" role="tablist" aria-label="Choose who you are" data-tabs>
+            <button class="tab" type="button" role="tab" id="tab-trucks" aria-controls="trucks" aria-selected="true" data-tab="trucks">
+              <i data-icon="truck"></i> Truck owners
+            </button>
+            <button class="tab" type="button" role="tab" id="tab-cargo" aria-controls="cargo" aria-selected="false" tabindex="-1" data-tab="cargo">
+              <i data-icon="package"></i> Cargo owners
+            </button>
+          </div>
+
+          <!-- ---------- TRUCK OWNERS ---------- -->
+          <div id="trucks" class="mt-6 scroll-mt-28" role="tabpanel" aria-labelledby="tab-trucks" tabindex="0" data-panel="trucks">
+            <div class="rounded-sk bg-sk-white p-5 text-sk-black shadow-sk-lg sm:p-8 on-light">
+              <h3 class="h3">Share your truck's availability</h3>
+              <p class="mt-2 text-sm">Tell us where you are and where you're going. We'll look for a load, and a return load when available.</p>
+
+              <form class="mt-6" novalidate data-wa-form="New TRUCK availability">
+                <div class="form-grid">
+                  <div class="field">
+                    <label class="label" for="t-location">Current truck location</label>
+                    <input class="input" id="t-location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Nairobi" required data-label="Location" aria-describedby="t-location-err">
+                    <p class="error" id="t-location-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-destination">Destination</label>
+                    <input class="input" id="t-destination" name="destination" type="text" placeholder="e.g. Mombasa" required data-label="Destination" aria-describedby="t-destination-err">
+                    <p class="error" id="t-destination-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-type">Truck type</label>
+                    <select class="input" id="t-type" name="type" required data-label="Truck type" aria-describedby="t-type-err">
+                      <option value="">Choose truck type</option>
+                      <option>Flatbed</option>
+                      <option>Box body</option>
+                      <option>Tipper</option>
+                      <option>Container / trailer</option>
+                      <option>Refrigerated</option>
+                      <option>Tanker</option>
+                      <option>Other</option>
+                    </select>
+                    <p class="error" id="t-type-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-capacity">Capacity (tonnes)</label>
+                    <input class="input" id="t-capacity" name="capacity" type="number" inputmode="decimal" min="0.5" max="100" step="0.5" placeholder="e.g. 30" required data-label="Capacity" data-suffix=" t" aria-describedby="t-capacity-err">
+                    <p class="error" id="t-capacity-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-date">Available from</label>
+                    <input class="input" id="t-date" name="date" type="date" required data-label="Available" data-min-today aria-describedby="t-date-err">
+                    <p class="error" id="t-date-err"></p>
+                  </div>
+                  <div class="field">
+                    <span class="label" id="t-return-l">Return load</span>
+                    <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-xl border-2 border-[#858B97] px-4">
+                      <input class="h-5 w-5 accent-[#1E5FD9]" type="checkbox" name="return" checked data-label="Return load wanted" data-yes="Yes, when available" data-no="No">
+                      <span class="text-sm">Also find me a load for the way back</span>
+                    </label>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-name">Your name</label>
+                    <input class="input" id="t-name" name="name" type="text" autocomplete="name" required data-label="Name" aria-describedby="t-name-err">
+                    <p class="error" id="t-name-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-phone">Phone / WhatsApp</label>
+                    <input class="input" id="t-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="07xx xxx xxx or +254…" required data-validate="phone" data-label="Phone" aria-describedby="t-phone-hint t-phone-err">
+                    <p class="hint" id="t-phone-hint">Kenyan (07xx / +254) or international (+ country code).</p>
+                    <p class="error" id="t-phone-err"></p>
+                  </div>
+                  <div class="field field-full">
+                    <label class="label" for="t-notes">Anything else? <span class="opt">(optional)</span></label>
+                    <textarea class="input" id="t-notes" name="notes" rows="3" placeholder="e.g. Can also go to Nakuru" data-label="Notes"></textarea>
+                  </div>
+                </div>
+                <button class="btn btn-wa btn-lg mt-6 w-full sm:w-auto" type="submit"><i data-icon="whatsapp"></i> Send on WhatsApp</button>
+                <p class="mt-3 text-xs text-sk-grey-600">This opens WhatsApp with your details filled in. Just press send.</p>
+                <div class="form-note" role="status" hidden data-form-note></div>
+              </form>
+            </div>
+          </div>
+
+          <!-- ---------- CARGO OWNERS ---------- -->
+          <div id="cargo" class="mt-6 scroll-mt-28" role="tabpanel" aria-labelledby="tab-cargo" tabindex="0" data-panel="cargo">
+            <div class="rounded-sk bg-sk-white p-5 text-sk-black shadow-sk-lg sm:p-8 on-light">
+              <h3 class="h3">Tell us what you need to move</h3>
+              <p class="mt-2 text-sm">Any cargo, any route, any time. We'll connect you with a suitable truck.</p>
+
+              <form class="mt-6" novalidate data-wa-form="New CARGO request">
+                <div class="form-grid">
+                  <div class="field">
+                    <label class="label" for="c-pickup">Pickup location</label>
+                    <input class="input" id="c-pickup" name="pickup" type="text" placeholder="e.g. Mombasa port" required data-label="Pickup" aria-describedby="c-pickup-err">
+                    <p class="error" id="c-pickup-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-delivery">Delivery location</label>
+                    <input class="input" id="c-delivery" name="delivery" type="text" placeholder="e.g. Nairobi, Industrial Area" required data-label="Delivery" aria-describedby="c-delivery-err">
+                    <p class="error" id="c-delivery-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-type">Cargo type</label>
+                    <input class="input" id="c-type" name="cargo" type="text" placeholder="e.g. Bagged cement, furniture" required data-label="Cargo" aria-describedby="c-type-err">
+                    <p class="error" id="c-type-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-weight">Weight / quantity</label>
+                    <input class="input" id="c-weight" name="weight" type="text" placeholder="e.g. 20 tonnes or 400 bags" required data-label="Weight / qty" aria-describedby="c-weight-err">
+                    <p class="error" id="c-weight-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-date">Preferred date</label>
+                    <input class="input" id="c-date" name="date" type="date" required data-label="Preferred date" data-min-today aria-describedby="c-date-err">
+                    <p class="error" id="c-date-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-name">Your name</label>
+                    <input class="input" id="c-name" name="name" type="text" autocomplete="name" required data-label="Name" aria-describedby="c-name-err">
+                    <p class="error" id="c-name-err"></p>
+                  </div>
+                  <div class="field field-full">
+                    <label class="label" for="c-phone">Phone / WhatsApp</label>
+                    <input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="07xx xxx xxx or +254…" required data-validate="phone" data-label="Phone" aria-describedby="c-phone-hint c-phone-err">
+                    <p class="hint" id="c-phone-hint">Kenyan (07xx / +254) or international (+ country code).</p>
+                    <p class="error" id="c-phone-err"></p>
+                  </div>
+                  <div class="field field-full">
+                    <label class="label" for="c-notes">Anything else? <span class="opt">(optional)</span></label>
+                    <textarea class="input" id="c-notes" name="notes" rows="3" placeholder="e.g. Needs a covered truck, loading help" data-label="Notes"></textarea>
+                  </div>
+                </div>
+                <button class="btn btn-wa btn-lg mt-6 w-full sm:w-auto" type="submit"><i data-icon="whatsapp"></i> Send on WhatsApp</button>
+                <p class="mt-3 text-xs text-sk-grey-600">This opens WhatsApp with your details filled in. Just press send.</p>
+                <div class="form-note" role="status" hidden data-form-note></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFITS ============ -->
+    <section class="section on-light" aria-labelledby="benefits-title">
+      <div class="container-sk grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div class="reveal">
+          <p class="eyebrow text-sk-blue">Why use Skylink</p>
+          <h2 id="benefits-title" class="h2 title-bar mt-4">Less empty running. <span class="hl">More earning.</span></h2>
+          <ul class="mt-8 space-y-4">
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>Return loads when available</strong>, so your truck works both ways.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>Save time and costs</strong>. We search, you keep driving.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>More opportunities</strong>. Any truck type, any route.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>Direct connections</strong>. You deal with the cargo owner or transporter directly.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>One WhatsApp message</strong> is all it takes to start.</span></li>
+          </ul>
+        </div>
+        <div class="reveal on-dark rounded-sk bg-sk-black p-6 shadow-sk-lg sm:p-10">
+          <span class="icon-circle icon-circle-solid"><i data-icon="users"></i></span>
+          <h3 class="h3 mt-5">Join our <span class="hl">transporter network</span></h3>
+          <p class="mt-3 text-sk-grey-300">Own one truck or a fleet? Get on our list and we'll contact you when there's cargo on your routes.</p>
+          <a class="btn btn-wa btn-lg mt-6 w-full sm:w-auto" href="https://wa.me/{{WA_NUMBER}}?text=Hi%20Skylink%2C%20I%27d%20like%20to%20join%20your%20transporter%20network." target="_blank" rel="noopener"><i data-icon="whatsapp"></i> Join on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section bg-sk-black" aria-labelledby="faq-title">
+      <div class="container-sk max-w-3xl">
+        <p class="eyebrow text-sk-yellow">FAQ</p>
+        <h2 id="faq-title" class="h2 title-bar mt-4">Transport questions</h2>
+        <div class="mt-8 space-y-3">
+          <details class="faq-item">
+            <summary>Do you own trucks?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>No. Skylink doesn't own trucks or sell goods. We connect cargo owners with transporters, and transporters with loads.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Which routes do you cover?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Any route. Nairobi ⇄ Mombasa is a common example, but tell us your route and we'll search for you.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you guarantee a return load?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>No. We look for a return load on every request and connect you when one is available. Sharing your route early gives us the best chance.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What truck types can join?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Any type: flatbed, box body, tipper, container/trailer, refrigerated, tanker and more.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How do I get started?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Fill in the form above or send us a WhatsApp message on {{WA_DISPLAY}}. Tell us where you are, where you're going, your truck type and when you're available.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!--@ cta -->

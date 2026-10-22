@@ -1,0 +1,239 @@
+<!--META {
+  "file": "trade.html",
+  "nav": "trade",
+  "title": "B2B Suppliers for Kenya & Nigeria | Import Tiles from India | Skylink",
+  "description": "Buyers in Kenya and Nigeria: send product, quantity and destination and we connect you with verified suppliers, including tiles, sanitary ware, rice and spices from India. Suppliers from China, India and Japan: reach active buyers."
+} -->
+    <!-- ============ PAGE HERO ============ -->
+    <section class="hero-photo relative isolate overflow-hidden photo-fallback" aria-labelledby="page-title">
+      <img class="absolute inset-0 -z-10 h-full w-full object-cover object-[55%_50%]" src="assets/img/port-containers.webp" srcset="assets/img/port-containers-800.webp 800w, assets/img/port-containers.webp 1600w" sizes="100vw" alt="A truck carrying containers at a busy port with cranes and a cargo ship at sunset" width="1600" height="900" fetchpriority="high" decoding="async" onerror="this.remove()">
+      <div class="container-sk py-14 sm:py-20">
+        <p class="eyebrow text-sk-yellow">B2B trade · Supplier sourcing</p>
+        <h1 id="page-title" class="h1 mt-4 max-w-4xl">Let's connect the right buyer with <span class="hl">the right supplier.</span></h1>
+        <p class="lead mt-5 max-w-2xl text-sk-grey-300">We connect wholesale buyers in Kenya and Nigeria with verified manufacturers and suppliers from India, China, Japan and other markets.</p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a class="btn btn-yellow btn-lg" href="#buyers"><i data-icon="package-search"></i> I'm a buyer</a>
+          <a class="btn btn-ghost btn-lg" href="#suppliers"><i data-icon="factory"></i> I'm a supplier</a>
+        </div>
+      </div>
+      <div class="chevrons chevrons-faint" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ FOR BUYERS ============ -->
+    <section id="buyers" class="section on-grey" aria-labelledby="buyers-title">
+      <div class="container-sk">
+        <div class="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+          <div class="reveal">
+            <p class="eyebrow text-sk-blue">For buyers</p>
+            <h2 id="buyers-title" class="h2 title-bar mt-4">Wholesale buyers in <span class="hl">Kenya &amp; Nigeria</span></h2>
+            <p class="lead mt-6">Wholesalers, importers, distributors, contractors and business buyers. Send us:</p>
+            <ol class="mt-5 grid grid-cols-3 gap-2 text-center text-sm font-bold">
+              <li class="rounded-xl bg-sk-black p-3 text-sk-white"><span class="block font-display text-2xl text-sk-yellow">1</span>Product</li>
+              <li class="rounded-xl bg-sk-black p-3 text-sk-white"><span class="block font-display text-2xl text-sk-yellow">2</span>Quantity</li>
+              <li class="rounded-xl bg-sk-black p-3 text-sk-white"><span class="block font-display text-2xl text-sk-yellow">3</span>Destination / specs</li>
+            </ol>
+            <p class="mt-5">We'll check the right supplier and help connect you.</p>
+
+            <div class="card-light mt-8 border-l-4 border-l-sk-gold">
+              <p class="eyebrow text-sk-black">Verified supplier connections · India</p>
+              <ul class="mt-4 grid grid-cols-2 gap-3 text-sm font-semibold text-sk-black">
+                <li class="flex items-center gap-2"><span class="icon-circle icon-circle-sm"><i data-icon="grid-2x2"></i></span>Tiles</li>
+                <li class="flex items-center gap-2"><span class="icon-circle icon-circle-sm"><i data-icon="bath"></i></span>Sanitary ware</li>
+                <li class="flex items-center gap-2"><span class="icon-circle icon-circle-sm"><i data-icon="wheat"></i></span>Rice</li>
+                <li class="flex items-center gap-2"><span class="icon-circle icon-circle-sm"><i data-icon="leaf"></i></span>Spices</li>
+              </ul>
+              <p class="mt-4 text-sm">Plus other building and industrial products.</p>
+            </div>
+          </div>
+
+          <div class="reveal rounded-sk bg-sk-white p-5 shadow-sk-lg sm:p-8">
+            <h3 class="h3">Buyer request</h3>
+            <p class="mt-2 text-sm">Tell us what you're looking for. The more detail, the better the match.</p>
+            <form class="mt-6" novalidate data-wa-form="New BUYER request">
+              <div class="form-grid">
+                <div class="field field-full">
+                  <label class="label" for="b-product">Product</label>
+                  <input class="input" id="b-product" name="product" type="text" placeholder="e.g. Porcelain floor tiles 60×60" required data-label="Product" aria-describedby="b-product-err">
+                  <p class="error" id="b-product-err"></p>
+                </div>
+                <div class="field">
+                  <label class="label" for="b-qty">Quantity</label>
+                  <input class="input" id="b-qty" name="quantity" type="text" placeholder="e.g. 2 containers / 5,000 m²" required data-label="Quantity" aria-describedby="b-qty-err">
+                  <p class="error" id="b-qty-err"></p>
+                </div>
+                <div class="field">
+                  <label class="label" for="b-dest">Destination country / city</label>
+                  <input class="input" id="b-dest" name="destination" type="text" placeholder="e.g. Nairobi, Kenya / Lagos, Nigeria" required data-label="Destination" aria-describedby="b-dest-err">
+                  <p class="error" id="b-dest-err"></p>
+                </div>
+                <div class="field field-full">
+                  <label class="label" for="b-specs">Specifications <span class="opt">(optional)</span></label>
+                  <textarea class="input" id="b-specs" name="specs" rows="3" placeholder="Size, grade, colour, packaging, brand, budget…" data-label="Specifications"></textarea>
+                </div>
+                <div class="field">
+                  <label class="label" for="b-name">Your name / company</label>
+                  <input class="input" id="b-name" name="name" type="text" autocomplete="name" required data-label="Name" aria-describedby="b-name-err">
+                  <p class="error" id="b-name-err"></p>
+                </div>
+                <div class="field">
+                  <label class="label" for="b-phone">Phone / WhatsApp</label>
+                  <input class="input" id="b-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+254… or +234…" required data-validate="phone" data-label="Phone" aria-describedby="b-phone-hint b-phone-err">
+                  <p class="hint" id="b-phone-hint">Include your country code if outside Kenya.</p>
+                  <p class="error" id="b-phone-err"></p>
+                </div>
+              </div>
+              <button class="btn btn-wa btn-lg mt-6 w-full sm:w-auto" type="submit"><i data-icon="whatsapp"></i> Send on WhatsApp</button>
+              <div class="form-note" role="status" hidden data-form-note></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATEGORIES ============ -->
+    <section class="section bg-sk-black" aria-labelledby="cat-title">
+      <div class="container-sk">
+        <div class="max-w-2xl reveal">
+          <p class="eyebrow text-sk-yellow">What we source</p>
+          <h2 id="cat-title" class="h2 title-bar mt-4">Product <span class="hl">categories</span></h2>
+        </div>
+        <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <li class="card reveal"><span class="icon-circle"><i data-icon="layers"></i></span><h3 class="mt-4 text-lg font-bold">Steel</h3><p class="mt-1 text-sm text-sk-grey-300">Sheets, coils, pipes, tubes, bars and more.</p></li>
+          <li class="card reveal reveal-delay-1"><span class="icon-circle"><i data-icon="hammer"></i></span><h3 class="mt-4 text-lg font-bold">Hardware</h3><p class="mt-1 text-sm text-sk-grey-300">Construction hardware, fasteners, hand tools, fittings.</p></li>
+          <li class="card reveal reveal-delay-2"><span class="icon-circle"><i data-icon="cog"></i></span><h3 class="mt-4 text-lg font-bold">Mechanical</h3><p class="mt-1 text-sm text-sk-grey-300">Machinery, equipment, parts, industrial mechanical products.</p></li>
+          <li class="card reveal"><span class="icon-circle"><i data-icon="plug-zap"></i></span><h3 class="mt-4 text-lg font-bold">Electrical &amp; plumbing</h3><p class="mt-1 text-sm text-sk-grey-300">Electrical and plumbing products for projects and resale.</p></li>
+          <li class="card reveal reveal-delay-1"><span class="icon-circle"><i data-icon="construction"></i></span><h3 class="mt-4 text-lg font-bold">Building &amp; construction</h3><p class="mt-1 text-sm text-sk-grey-300">Cement, aggregates, formwork, scaffolding, safety equipment.</p></li>
+          <li class="card reveal reveal-delay-2"><span class="icon-circle"><i data-icon="factory"></i></span><h3 class="mt-4 text-lg font-bold">Industrial products</h3><p class="mt-1 text-sm text-sk-grey-300">Industrial supplies for factories and contractors.</p></li>
+          <li class="card reveal"><span class="icon-circle"><i data-icon="sofa"></i></span><h3 class="mt-4 text-lg font-bold">Furniture &amp; wholesale</h3><p class="mt-1 text-sm text-sk-grey-300">Furniture and other wholesale products.</p></li>
+          <li class="card reveal reveal-delay-1"><span class="icon-circle"><i data-icon="grid-2x2"></i></span><h3 class="mt-4 text-lg font-bold">Tiles &amp; sanitary ware</h3><p class="mt-1 text-sm text-sk-grey-300">Verified connections from India.</p></li>
+          <li class="card reveal reveal-delay-2"><span class="icon-circle"><i data-icon="wheat"></i></span><h3 class="mt-4 text-lg font-bold">Rice &amp; spices</h3><p class="mt-1 text-sm text-sk-grey-300">Verified connections from India.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ BUYER MARKETS BANNER (yellow) ============ -->
+    <section class="on-yellow relative overflow-hidden py-12 sm:py-14" aria-labelledby="markets-title">
+      <div class="band-chevrons pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 md:block" aria-hidden="true"></div>
+      <div class="container-sk relative flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="eyebrow">Buyer markets</p>
+          <h2 id="markets-title" class="h2 mt-3"><!--@ flag-ke --> Kenya <span class="mx-1 opacity-60">|</span> <!--@ flag-ng --> Nigeria</h2>
+        </div>
+        <p class="max-w-md text-lg font-semibold">Active buyers are looking for quality suppliers like you.</p>
+      </div>
+    </section>
+
+    <!-- ============ FOR SUPPLIERS ============ -->
+    <section id="suppliers" class="section on-light" aria-labelledby="suppliers-title">
+      <div class="container-sk grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+        <div class="reveal">
+          <p class="eyebrow text-sk-blue">For suppliers</p>
+          <h2 id="suppliers-title" class="h2 title-bar mt-4">Suppliers, <span class="hl">we're looking for you!</span></h2>
+          <p class="lead mt-6">Manufacturers, wholesalers and verified suppliers who want to reach buyers in Kenya, Nigeria and beyond.</p>
+          <p class="eyebrow mt-8 text-sk-black">Source markets</p>
+          <ul class="mt-3 flex flex-wrap gap-2 text-sm font-semibold">
+            <li class="inline-flex items-center gap-2 rounded-full border-2 border-sk-black/15 px-4 py-2"><i data-icon="globe" class="h-4 w-4 text-sk-blue"></i>China</li>
+            <li class="inline-flex items-center gap-2 rounded-full border-2 border-sk-black/15 px-4 py-2"><i data-icon="globe" class="h-4 w-4 text-sk-blue"></i>India</li>
+            <li class="inline-flex items-center gap-2 rounded-full border-2 border-sk-black/15 px-4 py-2"><i data-icon="globe" class="h-4 w-4 text-sk-blue"></i>Japan</li>
+            <li class="inline-flex items-center gap-2 rounded-full border-2 border-sk-black/15 px-4 py-2"><i data-icon="globe" class="h-4 w-4 text-sk-blue"></i>Other markets</li>
+          </ul>
+          <ul class="mt-8 space-y-3">
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span>Reach wholesale buyers, importers, distributors and contractors.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span>Direct connections. You talk to the buyer directly.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span>Steel, hardware, mechanical, electrical, plumbing, building, industrial, furniture and more.</span></li>
+          </ul>
+        </div>
+
+        <div class="reveal rounded-sk border border-black/[.06] bg-sk-grey-100 p-5 shadow-sk sm:p-8">
+          <h3 class="h3">Supplier registration</h3>
+          <p class="mt-2 text-sm">Tell us about your company and products.</p>
+          <form class="mt-6" novalidate data-wa-form="New SUPPLIER registration">
+            <div class="form-grid">
+              <div class="field">
+                <label class="label" for="s-company">Company name</label>
+                <input class="input" id="s-company" name="company" type="text" autocomplete="organization" required data-label="Company" aria-describedby="s-company-err">
+                <p class="error" id="s-company-err"></p>
+              </div>
+              <div class="field">
+                <label class="label" for="s-country">Country</label>
+                <input class="input" id="s-country" name="country" type="text" autocomplete="country-name" list="s-country-list" placeholder="e.g. India" required data-label="Country" aria-describedby="s-country-err">
+                <datalist id="s-country-list"><option value="China"><option value="India"><option value="Japan"><option value="Turkey"><option value="United Arab Emirates"><option value="Kenya"></datalist>
+                <p class="error" id="s-country-err"></p>
+              </div>
+              <div class="field field-full">
+                <label class="label" for="s-category">Product category</label>
+                <select class="input" id="s-category" name="category" required data-label="Category" aria-describedby="s-category-err">
+                  <option value="">Choose a category</option>
+                  <option>Steel</option>
+                  <option>Hardware</option>
+                  <option>Mechanical</option>
+                  <option>Electrical &amp; plumbing</option>
+                  <option>Building / construction materials</option>
+                  <option>Industrial products</option>
+                  <option>Tiles &amp; sanitary ware</option>
+                  <option>Food (rice, spices, etc.)</option>
+                  <option>Furniture &amp; other wholesale</option>
+                  <option>Other</option>
+                </select>
+                <p class="error" id="s-category-err"></p>
+              </div>
+              <div class="field field-full">
+                <label class="label" for="s-products">Products</label>
+                <textarea class="input" id="s-products" name="products" rows="3" placeholder="Main products, MOQ, certifications…" required data-label="Products" aria-describedby="s-products-err"></textarea>
+                <p class="error" id="s-products-err"></p>
+              </div>
+              <div class="field">
+                <label class="label" for="s-name">Contact person</label>
+                <input class="input" id="s-name" name="name" type="text" autocomplete="name" required data-label="Contact" aria-describedby="s-name-err">
+                <p class="error" id="s-name-err"></p>
+              </div>
+              <div class="field">
+                <label class="label" for="s-phone">Phone / WhatsApp</label>
+                <input class="input" id="s-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91… / +86… / +81…" required data-validate="phone" data-label="Phone" aria-describedby="s-phone-hint s-phone-err">
+                <p class="hint" id="s-phone-hint">Include your country code, e.g. +91.</p>
+                <p class="error" id="s-phone-err"></p>
+              </div>
+              <div class="field field-full">
+                <label class="label" for="s-email">Email <span class="opt">(optional)</span></label>
+                <input class="input" id="s-email" name="email" type="email" autocomplete="email" data-label="Email" aria-describedby="s-email-err">
+                <p class="error" id="s-email-err"></p>
+              </div>
+            </div>
+            <button class="btn btn-wa btn-lg mt-6 w-full sm:w-auto" type="submit"><i data-icon="whatsapp"></i> Send on WhatsApp</button>
+            <div class="form-note" role="status" hidden data-form-note></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section on-grey" aria-labelledby="faq-title">
+      <div class="container-sk max-w-3xl">
+        <p class="eyebrow text-sk-blue">FAQ</p>
+        <h2 id="faq-title" class="h2 title-bar mt-4">Trade questions</h2>
+        <div class="mt-8 space-y-3">
+          <details class="faq-item">
+            <summary>Do you sell the products yourselves?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>No. Skylink doesn't sell goods. We connect buyers with suitable suppliers, and you deal with each other directly.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Which countries do buyers come from?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Our buyers are currently in Kenya and Nigeria, and we're growing beyond.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Which countries do suppliers come from?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>China, India, Japan and other markets. We have verified connections in India for tiles, sanitary ware, rice and spices.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What do I need to send as a buyer?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Product + Quantity + Destination, plus any specifications (size, grade, packaging). That's enough for us to start checking.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How do I get started?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Use the buyer or supplier form on this page, or message us on WhatsApp at {{WA_DISPLAY}}.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!--@ cta -->

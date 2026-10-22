@@ -1,0 +1,380 @@
+/* Skylink Global Network — source stylesheet.
+   Compiled to /assets/css/style.css by `npm run css` (see _build/README.md). */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Brand tokens ---------- */
+:root {
+  --sk-black: #0A0A0A;
+  --sk-charcoal: #16181D;
+  --sk-yellow: #FFD200;
+  --sk-yellow-dark: #E6B800;
+  --sk-blue: #1E5FD9;
+  --sk-sky: #2EA3F2;
+  --sk-orange: #F5A300;
+  --sk-gold: #C9A24A;
+  --sk-whatsapp: #25D366;
+  --sk-success: #22C55E;
+  --sk-white: #FFFFFF;
+  --sk-grey-100: #F4F5F7;
+  --sk-grey-600: #5B6170;
+  --sk-grey-300: #B9BEC9;
+
+  --sk-radius: 14px;
+  --sk-header-h: 4.25rem;
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--sk-header-h) + 1rem);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-sk-black font-sans text-base leading-relaxed text-sk-white antialiased;
+  }
+  img, svg { @apply max-w-full; }
+  :focus-visible {
+    outline: 3px solid var(--sk-yellow);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .on-light :focus-visible,
+  .on-yellow :focus-visible { outline-color: var(--sk-blue); }
+  .on-yellow :focus-visible { outline-color: var(--sk-black); }
+  ::selection { background: var(--sk-yellow); color: var(--sk-black); }
+  [hidden] { display: none !important; }
+}
+
+/* ---------- Components ---------- */
+@layer components {
+  .container-sk { @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-8; }
+  .section { @apply py-16 sm:py-20 lg:py-24; }
+
+  /* Light & yellow surfaces */
+  .on-light  { @apply bg-sk-white text-sk-black; }
+  .on-grey   { @apply bg-sk-grey-100 text-sk-black; }
+  .on-yellow { @apply bg-sk-yellow text-sk-black; }
+  .on-light p, .on-grey p { @apply text-sk-grey-600; }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-sk-yellow focus:px-4 focus:py-2 focus:font-semibold focus:text-sk-black;
+  }
+
+  /* Typography */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase sm:text-sm;
+    letter-spacing: .2em;
+  }
+  .display {
+    @apply font-display uppercase;
+    font-style: italic;          /* Anton has no italic; browser slants it like the posts */
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: .005em;
+  }
+  .h1 { @apply display text-[2.6rem] sm:text-6xl lg:text-7xl; }
+  .h2 { @apply display text-[2rem] sm:text-5xl; }
+  .h3 { @apply display text-2xl sm:text-3xl; }
+  .hl { color: var(--sk-yellow); }                    /* only on dark backgrounds */
+  .on-light .hl, .on-grey .hl { color: var(--sk-blue); } /* never yellow text on white */
+  .title-bar::after {
+    content: "";
+    display: block;
+    width: 4.5rem;
+    height: 6px;
+    margin-top: 1rem;
+    border-radius: 999px;
+    background: var(--sk-yellow);
+  }
+  .text-center .title-bar::after, .title-bar.mx-auto::after { margin-inline: auto; }
+  .on-yellow .title-bar::after { background: var(--sk-black); }
+  .lead { @apply text-base sm:text-lg; }
+
+  /* Buttons — all ≥ 48px tall touch targets */
+  .btn {
+    @apply inline-flex min-h-[48px] cursor-pointer items-center justify-center gap-2 rounded-xl px-5 py-3 text-[0.95rem] font-semibold leading-tight transition duration-200 ease-out;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn svg { @apply h-5 w-5 shrink-0; }
+  .btn-yellow { @apply bg-sk-yellow text-sk-black hover:bg-sk-yellow-dark; }
+  .btn-blue   { @apply bg-sk-blue text-sk-white hover:bg-[#184FB8]; }
+  .btn-dark   { @apply bg-sk-black text-sk-white hover:bg-sk-charcoal; }
+  .btn-wa     { @apply bg-sk-whatsapp text-sk-black hover:bg-[#1FBF5B]; }
+  .btn-ghost  { @apply border-2 border-white/30 text-sk-white hover:border-sk-yellow hover:text-sk-yellow; }
+  .on-light .btn-ghost, .on-grey .btn-ghost { @apply border-sk-black/20 text-sk-black hover:border-sk-blue hover:text-sk-blue; }
+  .btn-lg { @apply min-h-[56px] px-6 text-base; }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 font-semibold underline-offset-4 hover:underline;
+  }
+  .link-arrow svg { @apply h-4 w-4 transition-transform duration-200; }
+  .link-arrow:hover svg { transform: translateX(3px); }
+
+  /* Cards */
+  .card {
+    @apply rounded-sk border border-white/10 bg-sk-charcoal p-6 shadow-sk;
+  }
+  .card-light {
+    @apply rounded-sk border border-black/[.06] bg-sk-white p-6 text-sk-black shadow-sk;
+  }
+  .card-gold { border-color: rgba(201,162,74,.55); }
+  .card-light p { @apply text-sk-grey-600; }
+
+  /* Icon in rounded circle */
+  .icon-circle {
+    @apply inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-sk-yellow text-sk-yellow;
+  }
+  .icon-circle svg { @apply h-6 w-6; }
+  .icon-circle-sm { @apply h-10 w-10; }
+  .icon-circle-sm svg { @apply h-5 w-5; }
+  .on-light .icon-circle, .on-grey .icon-circle { @apply border-sk-blue text-sk-blue; }
+  .card-light .icon-circle { @apply border-sk-blue text-sk-blue; }
+  .on-yellow .icon-circle { @apply border-sk-black text-sk-black; }
+  .icon-circle-solid { @apply border-sk-yellow bg-sk-yellow text-sk-black; }
+
+  .check {
+    @apply inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sk-success text-sk-black;
+  }
+  .check svg { @apply h-4 w-4; stroke-width: 3; }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold uppercase;
+    letter-spacing: .08em;
+  }
+  .badge-yellow { @apply bg-sk-yellow text-sk-black; }
+  .badge-sky    { @apply bg-sk-sky text-sk-black; }
+  .badge-outline { @apply border border-white/25 text-sk-white; }
+
+  /* Gold hairline divider */
+  .gold-rule { height: 1px; background: linear-gradient(90deg, transparent, var(--sk-gold), transparent); }
+
+  /* Chevron strip (from the >>>>>> motif) */
+  .chevrons {
+    height: 28px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='28' viewBox='0 0 26 28'%3E%3Cpath d='M4 2l11 12L4 26' fill='none' stroke='%23FFD200' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 26px 28px;
+  }
+  .chevrons-dark {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='28' viewBox='0 0 26 28'%3E%3Cpath d='M4 2l11 12L4 26' fill='none' stroke='%230A0A0A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+  .chevrons-faint { opacity: .35; }
+
+  /* Big decorative chevrons in the yellow band */
+  .band-chevrons {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='200' viewBox='0 0 120 200'%3E%3Cpath d='M10 0h50l60 100-60 100H10l60-100z' fill='%23ffffff' fill-opacity='.22'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: right center;
+  }
+
+  /* Road-network map texture */
+  .map-bg {
+    background-image: url("../img/network-lines.svg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Photo with dark overlay + graceful fallback when the image is missing */
+  .photo-fallback {
+    background:
+      radial-gradient(120% 80% at 80% 20%, rgba(245,163,0,.28), transparent 60%),
+      radial-gradient(90% 70% at 10% 90%, rgba(30,95,217,.35), transparent 60%),
+      linear-gradient(160deg, #1d1f26 0%, #0A0A0A 70%);
+  }
+  .overlay-dark::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,10,.55) 0%, rgba(10,10,10,.72) 55%, rgba(10,10,10,.96) 100%);
+  }
+
+  .overlay-bottom::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,.92) 100%);
+  }
+
+  /* Header / nav */
+  /* Transparent header that floats over each page's hero photo;
+     JS adds .is-scrolled once you scroll past the top, giving it a dark blurred bar. */
+  .site-header {
+    @apply fixed inset-x-0 top-0 z-40 transition-[background-color,box-shadow,backdrop-filter] duration-300;
+  }
+  .site-header.is-scrolled,
+  .site-header.menu-open {
+    @apply bg-sk-black/80 shadow-sk backdrop-blur-md;
+  }
+  main > section:first-child { padding-top: var(--sk-header-h); }
+
+  .nav-link {
+    @apply relative rounded-md px-3 py-2 text-[0.95rem] font-medium text-sk-white transition-colors hover:text-sk-yellow;
+    text-shadow: 0 1px 8px rgba(0,0,0,.35);
+  }
+  .nav-cta {
+    @apply inline-flex min-h-[44px] items-center gap-2 rounded-full bg-sk-black/45 px-4 text-sm font-semibold text-sk-white backdrop-blur-md transition duration-200 hover:bg-sk-black/70 sm:px-5;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.12);
+  }
+  .nav-cta svg { @apply h-5 w-5 text-sk-whatsapp; }
+  .nav-link[aria-current="page"] { @apply text-sk-yellow; }
+  .nav-link[aria-current="page"]::after {
+    content: ""; position: absolute; left: .75rem; right: .75rem; bottom: .1rem;
+    height: 2px; background: var(--sk-yellow); border-radius: 2px;
+  }
+  .mobile-link {
+    @apply flex min-h-[52px] items-center justify-between border-b border-white/10 px-1 font-display text-2xl uppercase text-sk-white;
+  }
+  .mobile-link[aria-current="page"] { @apply text-sk-yellow; }
+
+  /* Text logo (shown until assets/img/logo-white.png exists) */
+  .logo-text { @apply flex flex-col leading-none; }
+  .logo-word {
+    @apply font-sans text-[1.6rem] font-extrabold italic tracking-tight;
+    color: #3B7BEA; /* lighter step of logo blue so it passes 3:1 on black at large size */
+  }
+  .logo-sub { @apply mt-1 text-[0.55rem] font-semibold uppercase text-sk-white; letter-spacing: .32em; }
+  .logo.has-image .logo-text { display: none; }
+  .logo:not(.has-image) .logo-img { display: none; }
+
+  /* Path cards in the hero */
+  .path-card {
+    @apply relative flex flex-col gap-3 overflow-hidden rounded-sk border-2 border-white/15 bg-sk-charcoal/90 p-5 transition duration-200 sm:p-6;
+    backdrop-filter: blur(6px);
+  }
+  .path-card:hover { @apply border-sk-yellow; transform: translateY(-2px); }
+
+  /* Steps */
+  .step-num {
+    @apply flex h-11 w-11 items-center justify-center rounded-full bg-sk-yellow font-display text-xl text-sk-black;
+  }
+
+  /* Route graphic */
+  .route-node {
+    @apply flex flex-col items-center gap-2 text-center;
+  }
+  .route-dot {
+    @apply flex h-14 w-14 items-center justify-center rounded-full border-2 border-sk-yellow bg-sk-black text-sk-yellow sm:h-16 sm:w-16;
+  }
+  .route-dot svg { @apply h-6 w-6 sm:h-7 sm:w-7; }
+  .route-line { position: relative; height: 4px; border-radius: 4px; }
+  .route-line::after {
+    content: ""; position: absolute; top: 50%; width: 12px; height: 12px;
+    border-top: 4px solid currentColor; border-right: 4px solid currentColor;
+  }
+  .route-line.to-right { background: repeating-linear-gradient(90deg, currentColor 0 12px, transparent 12px 20px); }
+  .route-line.to-right::after { right: -2px; transform: translateY(-50%) rotate(45deg); }
+  .route-line.to-left  { background: repeating-linear-gradient(90deg, currentColor 0 12px, transparent 12px 20px); }
+  .route-line.to-left::after  { left: -2px; transform: translateY(-50%) rotate(-135deg); }
+
+  /* Tabs */
+  .tab {
+    @apply flex min-h-[56px] flex-1 cursor-pointer items-center justify-center gap-2 rounded-xl px-3 text-sm font-bold uppercase transition sm:text-base;
+    letter-spacing: .06em;
+  }
+  .tab[aria-selected="true"] { @apply bg-sk-yellow text-sk-black; }
+  .tab[aria-selected="false"] { @apply text-sk-white hover:bg-white/10; }
+  .tab svg { @apply h-5 w-5; }
+
+  /* Forms */
+  .form-grid { @apply grid gap-4 sm:grid-cols-2; }
+  .field { @apply flex flex-col gap-1.5; }
+  .field-full { @apply sm:col-span-2; }
+  .label { @apply text-sm font-semibold text-sk-black; }
+  .label .opt { @apply font-normal text-sk-grey-600; }
+  .input {
+    @apply min-h-[48px] w-full rounded-xl border-2 border-[#858B97] bg-sk-white px-4 py-3 text-base text-sk-black transition placeholder:text-[#6B7180];
+    font-family: inherit;
+  }
+  .input:hover { border-color: #5B6170; }
+  .input:focus { outline: none; border-color: var(--sk-blue); box-shadow: 0 0 0 4px rgba(30,95,217,.2); }
+  textarea.input { min-height: 110px; resize: vertical; }
+  select.input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%235B6170' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 44px;
+  }
+  .input[aria-invalid="true"] { border-color: #C62828; }
+  .input[aria-invalid="true"]:focus { box-shadow: 0 0 0 4px rgba(198,40,40,.18); }
+  .hint { @apply text-xs text-sk-grey-600; }
+  .error { @apply flex items-center gap-1.5 text-sm font-medium text-[#B3261E]; }
+  .error:empty { display: none; }
+  .form-note {
+    @apply mt-4 flex items-start gap-3 rounded-xl border-2 border-sk-success bg-[#ECFDF3] p-4 text-sm text-[#14532D];
+  }
+  .form-note svg { @apply mt-0.5 h-5 w-5 shrink-0; }
+  .form-note a { @apply font-semibold underline; }
+
+  /* FAQ (native details/summary) */
+  .faq-item { @apply rounded-sk border border-white/10 bg-sk-charcoal; }
+  .on-light .faq-item, .on-grey .faq-item { @apply border-black/[.08] bg-sk-white; }
+  .faq-item summary {
+    @apply flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-semibold;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary svg { @apply h-5 w-5 shrink-0 transition-transform duration-200; }
+  .faq-item[open] summary svg { transform: rotate(180deg); }
+  .faq-item .faq-body { @apply px-5 pb-5; }
+  .faq-item .faq-body p { @apply text-sk-grey-300; }
+  .on-light .faq-item .faq-body p, .on-grey .faq-item .faq-body p { @apply text-sk-grey-600; }
+
+  /* Placeholder marker for content the owner must replace */
+  .placeholder-box {
+    @apply rounded-sk border-2 border-dashed border-sk-orange/70 p-5 text-sm;
+  }
+
+  /* Dark card nested inside a light section: restore dark-surface colours */
+  .on-dark { color: var(--sk-white); }
+  .on-dark p { color: var(--sk-grey-300); }
+  .on-dark .hl { color: var(--sk-yellow); }
+  .on-dark .icon-circle { border-color: var(--sk-yellow); color: var(--sk-yellow); }
+  .on-dark .icon-circle-solid { background: var(--sk-yellow); color: var(--sk-black); }
+  .on-dark .title-bar::after { background: var(--sk-yellow); }
+
+  /* Home hero photo overlay: dark on the text side, lets the trucks show on the right */
+  .hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(180deg, rgba(10,10,10,.35) 0%, rgba(10,10,10,.55) 45%, rgba(10,10,10,.95) 100%);
+  }
+  @media (min-width: 1024px) {
+    .hero-photo::after {
+      background:
+        linear-gradient(180deg, rgba(10,10,10,.6) 0, transparent 9rem),
+        linear-gradient(90deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.75) 40%, rgba(10,10,10,.2) 75%, rgba(10,10,10,.1) 100%),
+        linear-gradient(180deg, transparent 60%, rgba(10,10,10,.9) 100%);
+    }
+  }
+
+  /* Floating WhatsApp */
+  .wa-float {
+    @apply fixed z-50 flex h-14 w-14 items-center justify-center rounded-full bg-sk-whatsapp text-sk-black shadow-sk-lg transition hover:scale-105;
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+  .wa-float svg { @apply h-7 w-7; }
+}
+
+/* ---------- Scroll reveal (JS adds .js to <html>) ---------- */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease-out, transform .6s ease-out; }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+.js .reveal-delay-1 { transition-delay: .08s; }
+.js .reveal-delay-2 { transition-delay: .16s; }
+.js .reveal-delay-3 { transition-delay: .24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}

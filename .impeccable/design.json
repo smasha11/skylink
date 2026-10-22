@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T12:00:00Z",
+  "title": "Design System: Skylink Global Network",
+  "extensions": {
+    "colorMeta": {
+      "cloth-black": { "role": "neutral", "displayName": "Cloth Black", "canonical": "#0A0A0A", "tonalRamp": ["#0A0A0A", "#16181D", "#24272E", "#3A3D45", "#5B6170", "#858B97", "#B9BEC9", "#F4F5F7"] },
+      "charcoal": { "role": "neutral", "displayName": "Charcoal", "canonical": "#16181D", "tonalRamp": ["#0A0A0A", "#16181D", "#24272E", "#3A3D45", "#5B6170", "#858B97", "#B9BEC9", "#F4F5F7"] },
+      "signal-yellow": { "role": "primary", "displayName": "Signal Yellow", "canonical": "#FFD200", "tonalRamp": ["#2E2400", "#574500", "#806500", "#AD8A00", "#E6B800", "#FFD200", "#FFE266", "#FFF6CC"] },
+      "signal-yellow-deep": { "role": "primary", "displayName": "Deep Yellow", "canonical": "#E6B800", "tonalRamp": ["#2E2400", "#574500", "#806500", "#AD8A00", "#E6B800", "#FFD200", "#FFE266", "#FFF6CC"] },
+      "logo-blue": { "role": "secondary", "displayName": "Logo Blue", "canonical": "#1E5FD9", "tonalRamp": ["#0A1C42", "#10306F", "#184FB8", "#1E5FD9", "#3B7BEA", "#6F9DF0", "#A9C4F6", "#E3ECFC"] },
+      "logo-blue-deep": { "role": "secondary", "displayName": "Deep Logo Blue", "canonical": "#184FB8", "tonalRamp": ["#0A1C42", "#10306F", "#184FB8", "#1E5FD9", "#3B7BEA", "#6F9DF0", "#A9C4F6", "#E3ECFC"] },
+      "wordmark-blue": { "role": "secondary", "displayName": "Wordmark Blue", "canonical": "#3B7BEA", "tonalRamp": ["#0A1C42", "#10306F", "#184FB8", "#1E5FD9", "#3B7BEA", "#6F9DF0", "#A9C4F6", "#E3ECFC"] },
+      "return-sky": { "role": "tertiary", "displayName": "Return Sky", "canonical": "#2EA3F2", "tonalRamp": ["#06243A", "#0B4166", "#105F95", "#1882C9", "#2EA3F2", "#6CBEF6", "#A8D8FA", "#E2F2FD"] },
+      "fuel-orange": { "role": "tertiary", "displayName": "Fuel Orange", "canonical": "#F5A300", "tonalRamp": ["#2E1A00", "#5C3300", "#B45309", "#D98500", "#F5A300", "#FFBE3D", "#FFD98A", "#FFF2D6"] },
+      "fuel-orange-ink": { "role": "tertiary", "displayName": "Fuel Orange Ink", "canonical": "#B45309", "tonalRamp": ["#2E1A00", "#5C3300", "#B45309", "#D98500", "#F5A300", "#FFBE3D", "#FFD98A", "#FFF2D6"] },
+      "whatsapp-green": { "role": "tertiary", "displayName": "WhatsApp Green", "canonical": "#25D366", "tonalRamp": ["#05301A", "#0A5A30", "#128C47", "#1FBF5B", "#25D366", "#5FE08E", "#A3EDBE", "#E3FAEC"] },
+      "check-green": { "role": "tertiary", "displayName": "Check Green", "canonical": "#22C55E", "tonalRamp": ["#052E16", "#14532D", "#15803D", "#16A34A", "#22C55E", "#4ADE80", "#86EFAC", "#ECFDF3"] },
+      "paper-white": { "role": "neutral", "displayName": "Paper White", "canonical": "#FFFFFF", "tonalRamp": ["#0A0A0A", "#3A3D45", "#5B6170", "#858B97", "#B9BEC9", "#ECEEF2", "#F4F5F7", "#FFFFFF"] },
+      "grey-wash": { "role": "neutral", "displayName": "Grey Wash", "canonical": "#F4F5F7", "tonalRamp": ["#0A0A0A", "#3A3D45", "#5B6170", "#858B97", "#B9BEC9", "#ECEEF2", "#F4F5F7", "#FFFFFF"] },
+      "light-alt-wash": { "role": "neutral", "displayName": "Light Alt Wash", "canonical": "#ECEEF2", "tonalRamp": ["#0A0A0A", "#3A3D45", "#5B6170", "#858B97", "#B9BEC9", "#ECEEF2", "#F4F5F7", "#FFFFFF"] },
+      "dust-grey": { "role": "neutral", "displayName": "Dust Grey", "canonical": "#B9BEC9", "tonalRamp": ["#0A0A0A", "#3A3D45", "#5B6170", "#858B97", "#B9BEC9", "#ECEEF2", "#F4F5F7", "#FFFFFF"] },
+      "slate-grey": { "role": "neutral", "displayName": "Slate Grey", "canonical": "#5B6170", "tonalRamp": ["#0A0A0A", "#3A3D45", "#5B6170", "#858B97", "#B9BEC9", "#ECEEF2", "#F4F5F7", "#FFFFFF"] },
+      "field-stroke": { "role": "neutral", "displayName": "Field Stroke", "canonical": "#858B97", "tonalRamp": ["#0A0A0A", "#3A3D45", "#5B6170", "#858B97", "#B9BEC9", "#ECEEF2", "#F4F5F7", "#FFFFFF"] },
+      "error-red": { "role": "tertiary", "displayName": "Error Red", "canonical": "#B3261E", "tonalRamp": ["#330B08", "#601410", "#8C1D17", "#B3261E", "#C62828", "#E06A64", "#F0AEAA", "#FCE8E7"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Home hero message band only." },
+      "headline-page": { "displayName": "Page Headline", "purpose": "Inner page titles anchored low on the photo header." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles and message bands; one key phrase in yellow (blue on light)." },
+      "title": { "displayName": "Title", "purpose": "Step titles, sub-section heads; dispatch titles and mobile menu links at fixed sizes." },
+      "lead": { "displayName": "Lead", "purpose": "Intro paragraph under a heading, 34rem measure." },
+      "body": { "displayName": "Body", "purpose": "Reading text; list heads and FAQ questions semibold." },
+      "label": { "displayName": "Pinned Label", "purpose": "Only the user's pinned tagline lines; never an invented section kicker." }
+    },
+    "shadows": [
+      { "name": "form-lift", "value": "0 30px 60px -30px rgba(0,0,0,.55)", "purpose": "White form panel resting on a grey or dark field." },
+      { "name": "light-card", "value": "0 1px 2px rgba(10,10,10,.04), 0 12px 32px -18px rgba(10,10,10,.18)", "purpose": "The single white card on a light field." },
+      { "name": "floating-action", "value": "0 12px 30px -10px rgba(0,0,0,.6)", "purpose": "Fixed WhatsApp button." },
+      { "name": "field-focus", "value": "0 0 0 4px rgba(30,95,217,.18)", "purpose": "Input focus halo." },
+      { "name": "header-hairline", "value": "0 1px 0 rgba(255,255,255,.06)", "purpose": "Scrolled header bottom edge (rgba(10,10,10,.08) in light theme)." }
+    ],
+    "motion": [
+      { "name": "lane-draw", "value": "transform 1.1s cubic-bezier(.65,0,.35,1)", "purpose": "One-time route draw on scroll; return lane delayed .9s, labels fade in .4s after .7s / 1.8s." },
+      { "name": "state", "value": "200ms ease-out", "purpose": "Button, chip, dispatch and link state changes." },
+      { "name": "header", "value": "300ms", "purpose": "Header background/blur transition on scroll." },
+      { "name": "reduced-motion", "value": "transition-duration: .01ms", "purpose": "All motion collapses; the route renders drawn." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ],
+    "themes": [
+      { "name": "dark", "default": true, "purpose": "Black cloth; default before first paint unless localStorage sk-theme is light." },
+      { "name": "light", "default": false, "purpose": "Repaints dark non-photo fields (.ds to #FFFFFF, .ds-alt to #ECEEF2), yellow text to logo blue, lanes to black ink with blue return. Photo sections, the yellow field and forms unchanged." }
+    ],
+    "lane": { "width": "4px", "dash": "22px", "gap": "16px" }
+  },
+  "components": [
+    {
+      "name": "Yellow Button",
+      "kind": "button",
+      "refersTo": "button-yellow",
+      "description": "Primary action on dark fields.",
+      "html": "<button class=\"ds-btn ds-btn-yellow\">Send my truck details</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 12px 24px; border: 0; border-radius: 12px; font-family: Poppins, system-ui, sans-serif; font-size: .95rem; font-weight: 600; line-height: 1.25; cursor: pointer; transition: background-color .2s ease-out, transform .2s ease-out; } .ds-btn-yellow { background: #FFD200; color: #0A0A0A; } .ds-btn-yellow:hover { background: #E6B800; } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 3px solid #FFD200; outline-offset: 3px; }"
+    },
+    {
+      "name": "WhatsApp Button",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "Every WhatsApp action; the end of every path.",
+      "html": "<button class=\"ds-btn-wa\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z\"/></svg>Chat on WhatsApp</button>",
+      "css": ".ds-btn-wa { display: inline-flex; align-items: center; gap: 10px; min-height: 58px; padding: 12px 28px; border: 0; border-radius: 12px; background: #25D366; color: #0A0A0A; font-family: Poppins, system-ui, sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color .2s ease-out; } .ds-btn-wa:hover { background: #1FBF5B; } .ds-btn-wa:active { transform: translateY(1px); } .ds-btn-wa:focus-visible { outline: 3px solid #FFD200; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Secondary action beside a primary, outlined at 30% of the text colour.",
+      "html": "<button class=\"ds-btn-ghost\">I'm a supplier</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; min-height: 52px; padding: 12px 24px; border: 2px solid rgba(255,255,255,.3); border-radius: 12px; background: transparent; color: #FFFFFF; font-family: Poppins, system-ui, sans-serif; font-size: .95rem; font-weight: 600; cursor: pointer; transition: border-color .2s ease-out; } .ds-btn-ghost:hover { border-color: #FFFFFF; } .ds-btn-ghost:focus-visible { outline: 3px solid #FFD200; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled form field; identical in both themes.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-label\">Current truck location</span><input class=\"ds-input\" placeholder=\"e.g. Mombasa, Kenya\"></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; font-family: Poppins, system-ui, sans-serif; } .ds-label { font-size: .875rem; font-weight: 600; color: #0A0A0A; } .ds-input { min-height: 52px; padding: 12px 16px; border: 1.5px solid #858B97; border-radius: 12px; background: #FFFFFF; color: #0A0A0A; font: inherit; font-size: 1rem; transition: border-color .2s, box-shadow .2s; } .ds-input::placeholder { color: #6B7180; } .ds-input:hover { border-color: #5B6170; } .ds-input:focus { outline: none; border-color: #1E5FD9; box-shadow: 0 0 0 4px rgba(30,95,217,.18); }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link-current",
+      "description": "Header links over the photo; current page is a yellow block.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" aria-current=\"page\" href=\"#\">Home</a><a class=\"ds-nav-link\" href=\"#\">Transport</a><a class=\"ds-nav-link\" href=\"#\">Trade</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 8px; padding: 16px; background: #0A0A0A; font-family: Poppins, system-ui, sans-serif; } .ds-nav-link { padding: 8px 12px; border-radius: 6px; color: rgba(255,255,255,.9); font-size: .92rem; font-weight: 500; text-decoration: none; transition: color .2s; } .ds-nav-link:hover { color: #FFFFFF; } .ds-nav-link[aria-current=\"page\"] { background: #FFD200; color: #0A0A0A; } .ds-nav-link:focus-visible { outline: 3px solid #FFD200; outline-offset: 3px; }"
+    },
+    {
+      "name": "Route Chip",
+      "kind": "chip",
+      "refersTo": "route-chip",
+      "description": "One corridor at a time; the pressed chip redraws the route.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Nairobi &#8644; Mombasa</button><button class=\"ds-chip\" aria-pressed=\"false\">Lagos &#8644; Accra</button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; padding: 16px; background: #0A0A0A; } .ds-chip { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid rgba(255,255,255,.2); border-radius: 9999px; background: transparent; color: #FFFFFF; font-family: Poppins, system-ui, sans-serif; font-size: .875rem; font-weight: 500; cursor: pointer; transition: border-color .2s, background-color .2s; } .ds-chip:hover { border-color: #FFFFFF; } .ds-chip[aria-pressed=\"true\"] { background: #FFD200; border-color: #FFD200; color: #0A0A0A; } .ds-chip:focus-visible { outline: 3px solid #FFD200; outline-offset: 3px; }"
+    },
+    {
+      "name": "Message Band",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "The cloth's saying: a user tagline in Anton capitals between 7px double rules.",
+      "html": "<div class=\"ds-band-wrap\"><h2 class=\"ds-ujumbe\">Real connections. <span class=\"ds-hl\">Real movement.</span></h2></div>",
+      "css": ".ds-band-wrap { padding: 24px; background: #0A0A0A; color: #FFFFFF; } .ds-ujumbe { margin: 0; font-family: Anton, Oswald, Impact, sans-serif; font-weight: 400; text-transform: uppercase; line-height: .95; letter-spacing: .01em; text-align: center; text-wrap: balance; font-size: clamp(2.25rem, 3.6vw + 1rem, 4.25rem); padding-block: clamp(.9rem, 1.6vw, 1.4rem); border-block: 7px double #FFD200; } .ds-hl { color: #FFD200; }"
+    },
+    {
+      "name": "Route Lanes",
+      "kind": "custom",
+      "refersTo": "badge-load-1",
+      "description": "Load 1 solid yellow out, Load 2 dashed sky back.",
+      "html": "<div class=\"ds-route\"><div class=\"ds-leg\"><span class=\"ds-badge ds-badge-1\">Load 1</span><span class=\"ds-lane\"></span></div><div class=\"ds-leg\"><span class=\"ds-lane ds-lane-return\"></span><span class=\"ds-badge ds-badge-2\">Load 2</span></div></div>",
+      "css": ".ds-route { display: flex; flex-direction: column; gap: 40px; padding: 24px; background: #0A0A0A; font-family: Poppins, system-ui, sans-serif; } .ds-leg { display: flex; align-items: center; gap: 12px; } .ds-lane { flex: 1; height: 4px; border-radius: 2px; background: #FFD200; } .ds-lane-return { background: repeating-linear-gradient(90deg, #2EA3F2 0 22px, transparent 22px 38px); } .ds-badge { display: inline-flex; padding: 4px 12px; border-radius: 9999px; font-size: .75rem; font-weight: 600; letter-spacing: .02em; color: #0A0A0A; } .ds-badge-1 { background: #FFD200; } .ds-badge-2 { background: #2EA3F2; }"
+    },
+    {
+      "name": "Dispatch Bar",
+      "kind": "custom",
+      "refersTo": "button-yellow",
+      "description": "Hero's split choice: Have a load? | Have a truck?",
+      "html": "<nav class=\"ds-dispatch\"><a class=\"ds-half\" href=\"#\"><span class=\"ds-dicon\"></span><span><span class=\"ds-dtitle\">Have a load?</span><span class=\"ds-dsub\">Tell us what you need to move.</span></span></a><a class=\"ds-half\" href=\"#\"><span class=\"ds-dicon\"></span><span><span class=\"ds-dtitle\">Have a truck?</span><span class=\"ds-dsub\">Share your availability.</span></span></a></nav>",
+      "css": ".ds-dispatch { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border: 1px solid rgba(255,255,255,.15); border-radius: 16px; background: rgba(10,10,10,.85); font-family: Poppins, system-ui, sans-serif; color: #FFFFFF; } .ds-half { display: flex; align-items: center; gap: 16px; min-height: 92px; padding: 16px 24px; color: inherit; text-decoration: none; transition: background-color .2s; } .ds-half + .ds-half { border-left: 1px solid rgba(255,255,255,.15); } .ds-half:hover, .ds-half:focus-visible { background: #FFD200; color: #0A0A0A; outline: none; } .ds-dicon { width: 48px; height: 48px; flex-shrink: 0; border-radius: 12px; background: #FFD200; transition: background-color .2s; } .ds-half:hover .ds-dicon, .ds-half:focus-visible .ds-dicon { background: #0A0A0A; } .ds-dtitle { display: block; font-family: Anton, Impact, sans-serif; font-size: 1.6rem; text-transform: uppercase; line-height: 1; } .ds-dsub { display: block; margin-top: 4px; font-size: .875rem; color: #B9BEC9; } .ds-half:hover .ds-dsub { color: rgba(10,10,10,.75); }"
+    },
+    {
+      "name": "Hairline FAQ Row",
+      "kind": "card",
+      "refersTo": "body",
+      "description": "Lists are hairline rows, never boxed cards.",
+      "html": "<details class=\"ds-faq\"><summary>Do you own trucks?<span class=\"ds-plus\">+</span></summary><p>No. We connect transporters and cargo owners.</p></details>",
+      "css": ".ds-faq { border-block: 1px solid rgba(255,255,255,.12); background: #0A0A0A; color: #FFFFFF; font-family: Poppins, system-ui, sans-serif; padding-inline: 16px; } .ds-faq summary { display: flex; justify-content: space-between; align-items: center; min-height: 64px; font-size: 1.125rem; font-weight: 600; cursor: pointer; list-style: none; } .ds-faq summary::-webkit-details-marker { display: none; } .ds-plus { color: #FFD200; font-size: 1.5rem; transition: transform .2s; } .ds-faq[open] .ds-plus { transform: rotate(45deg); } .ds-faq p { color: #B9BEC9; padding-bottom: 24px; margin: 0; } .ds-faq summary:focus-visible { outline: 3px solid #FFD200; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Printed Cloth",
+    "overview": "Every page is printed like a kanga: a black cloth carrying one yellow ink, with Skylink's message set where the cloth's saying goes. The saying is the message band: Anton capitals held between two double rules, spanning the width of its field. Around it, the content reads as a working sheet for a driver on an Android phone in sunlight: big condensed headings, plain Poppins prose, thumb-sized actions, and one WhatsApp message as the end of every path.\n\nThe cloth has no printed border. The decorative border strips (pindo) were removed by the user on 2026-10-22 because they pulled attention from content; frames are not part of this system and must not be reintroduced. What remains is the field and its print: message bands, the lane line that only appears where something moves in sequence (Load 1 solid, Load 2 dashed), hairline lists instead of boxed cards, and stock photos whose provenance is stitched to them with a running-stitch seam.\n\nSections alternate dark and light, per the user's brief: \"Alternate dark (black) and light (white/grey) sections the way our posts do.\" Dark is the default theme; a sun/moon toggle in the header repaints the dark non-photo fields to white for readers who prefer it, while photo sections, the yellow section and the forms print the same in both.",
+    "keyCharacteristics": [
+      "Black cloth, one yellow ink, logo blue as the secondary voice.",
+      "Message bands (Anton capitals between 7px double rules) carry the user's exact taglines.",
+      "The lane line: solid for Load 1 out, dashed for Load 2 back, drawn once when the route enters view.",
+      "Hairline rows and columns, not boxed cards; panels only where content is a real unit (a form).",
+      "Full-bleed stock photography under a darkening overlay, always captioned as stock on a seamed note.",
+      "No frames, no border strips, no decorative shadows."
+    ],
+    "rules": [
+      { "name": "The One Ink Rule", "body": "Yellow is the only accent on a dark field. Blue, sky, orange and green each own one job and never decorate.", "section": "colors" },
+      { "name": "The Never Yellow On White Rule", "body": "Yellow text never sits on white or grey. On any light ground, the key phrase, icon and focus colour switch to logo blue; in light theme every yellow text on a repainted field becomes blue. Yellow as a fill (buttons, chips, badges, the yellow section) with black text is fine. Every text pair meets WCAG AA.", "section": "colors" },
+      { "name": "The Two Loads Rule", "body": "Load 1 is yellow and solid; Load 2 is sky and dashed. This pairing is the meaning of the lane and is not reused for anything else.", "section": "colors" },
+      { "name": "The Upright Capitals Rule", "body": "Display type is always Anton, uppercase, weight 400, never italic, never tracked wider than 0.01em. Poppins is never set in capitals for headings.", "section": "typography" },
+      { "name": "The Pinned Label Rule", "body": "The wide-spaced uppercase label exists because the user pinned it verbatim: \"Small labels/eyebrows: uppercase with wide letter-spacing (0.2em), like 'WE SIMPLY CONNECT THE RIGHT PEOPLE.'\" It carries only the user's own tagline lines (\"We simply connect the right people.\", \"Business | Travel | Logistics | Opportunities\"). It is not a section kicker: never invent label text above headings.", "section": "typography" },
+      { "name": "The Flat Cloth Rule", "body": "Sections, lists and bands never carry shadows. If an element is not a form, a floating button or the one light card, it is flat.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep dark as the default theme and let the header toggle switch to light; in light theme repaint only dark non-photo fields, keep photo sections, the yellow field and forms unchanged.",
+      "Do switch every yellow text to logo blue on white or grey grounds.",
+      "Do set the user's exact taglines in message bands between 7px double rules.",
+      "Do use the lane only for real sequences: Load 1 solid yellow, Load 2 dashed sky.",
+      "Do separate list items with 1px hairlines and reserve panels for forms.",
+      "Do caption every stock photo as stock on a seamed note.",
+      "Do keep touch targets at 44px or more and every text pair at WCAG AA."
+    ],
+    "donts": [
+      "Don't reintroduce frames or the printed border strips (pindo); the user removed them on 2026-10-22 because they pulled attention from content.",
+      "Don't put yellow text on white or grey.",
+      "Don't invent label kickers above headings; the spaced label carries only the user's pinned tagline lines.",
+      "Don't box lists into cards or add shadows to sections and bands.",
+      "Don't use WhatsApp green, sky or orange for anything but their single job.",
+      "Don't set display type in anything but upright Anton capitals."
+    ]
+  }
+}

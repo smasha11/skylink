@@ -1,0 +1,279 @@
+<!--META {
+  "file": "transport.html",
+  "nav": "transport",
+  "title": "Find Cargo for Your Truck Across Africa | Return Loads | Skylink",
+  "description": "Truck owners: share your route anywhere in Africa and get matched with loads, plus a return load when available. Cargo owners: tell us what to move and we connect you with suitable transporters."
+} -->
+    <!-- ============ PAGE HERO ============ -->
+    <section class="hero-photo page-hero relative isolate overflow-hidden photo-fallback" aria-labelledby="page-title">
+      <img class="absolute inset-0 -z-10 h-full w-full object-cover object-[60%_60%]" src="assets/img/highway-aerial.webp" srcset="assets/img/highway-aerial-800.webp 800w, assets/img/highway-aerial.webp 1600w" sizes="100vw" alt="Aerial view of two container trucks on a highway through the Kenyan savanna at sunset" width="1600" height="900" fetchpriority="high" decoding="async" onerror="this.remove()">
+      <div class="container-sk relative z-10 pb-16 sm:pb-20">
+        <h1 id="page-title" class="ujumbe ujumbe-left ujumbe-page">Any truck. Any route. <span class="text-sk-yellow">More loads.</span></h1>
+        <p class="lead measure mt-6 text-sk-white/90">Skylink doesn't own trucks. We connect transporters and cargo owners on routes across Africa, within one country or across borders, and we look for a return load for your trip back when available.</p>
+        <div class="mt-7 flex flex-wrap gap-2">
+          <span class="badge badge-yellow">Load 1: your trip out</span>
+          <span class="badge badge-sky">Load 2: your trip back, when available</span>
+        </div>
+        <p class="seam-note mt-6">Stock photo: container trucks crossing the savanna</p>
+      </div>
+    </section>
+
+    <!-- ============ RECENT LOADS (from the user's posters) ============ -->
+    <section id="loads" class="ds section bg-sk-black" aria-labelledby="loads-title">
+      <div class="container-sk">
+        <div class="grid gap-4 lg:grid-cols-2 lg:items-end">
+          <h2 id="loads-title" class="h2 title-bar">Recent <span class="hl">loads</span></h2>
+          <div class="lg:justify-self-end lg:text-right">
+            <p class="mt-5 text-sm text-sk-grey-300">Loads we have posted for transporters. Loads move fast: availability and rates are confirmed when you message us. Photos are from our load posters.</p>
+          </div>
+        </div>
+        <div class="mt-12">
+      <!--@ loads-all -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TABS + FORMS ============ -->
+    <section class="ds section bg-sk-black ds-alt" aria-labelledby="forms-title">
+      <div class="container-sk">
+        <h2 id="forms-title" class="sr-only">Send us your request</h2>
+
+        <div class="mx-auto max-w-3xl">
+          <div class="flex gap-2 rounded-2xl border border-white/10 bg-sk-black p-2" role="tablist" aria-label="Choose who you are" data-tabs>
+            <button class="tab" type="button" role="tab" id="tab-trucks" aria-controls="trucks" aria-selected="true" data-tab="trucks">
+              <i data-icon="truck"></i> Truck owners
+            </button>
+            <button class="tab" type="button" role="tab" id="tab-cargo" aria-controls="cargo" aria-selected="false" tabindex="-1" data-tab="cargo">
+              <i data-icon="package"></i> Cargo owners
+            </button>
+          </div>
+
+          <!-- ---------- TRUCK OWNERS ---------- -->
+          <div id="trucks" class="mt-6 scroll-mt-28" role="tabpanel" aria-labelledby="tab-trucks" tabindex="0" data-panel="trucks">
+            <div class="panel-form on-light">
+              <h3 class="h3">Share your truck's availability</h3>
+              <p class="mt-2 text-sm">Tell us where you are and where you're going. We'll look for a load, and a return load when available.</p>
+
+              <form class="mt-6" novalidate data-wa-form="New TRUCK availability">
+                <div class="form-grid">
+                  <div class="field">
+                    <label class="label" for="t-location">Current truck location</label>
+                    <input class="input" id="t-location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Mombasa, Kenya" required data-label="Location" aria-describedby="t-location-err">
+                    <p class="error" id="t-location-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-destination">Destination</label>
+                    <input class="input" id="t-destination" name="destination" type="text" placeholder="e.g. Kampala, Uganda" required data-label="Destination" aria-describedby="t-destination-err">
+                    <p class="error" id="t-destination-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-type">Truck type</label>
+                    <select class="input" id="t-type" name="type" required data-label="Truck type" aria-describedby="t-type-err">
+                      <option value="">Choose truck type</option>
+                      <option>Flatbed</option>
+                      <option>Box body</option>
+                      <option>Tipper</option>
+                      <option>Container / trailer</option>
+                      <option>Refrigerated</option>
+                      <option>Tanker</option>
+                      <option>Other</option>
+                    </select>
+                    <p class="error" id="t-type-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-capacity">Capacity (tonnes)</label>
+                    <input class="input" id="t-capacity" name="capacity" type="number" inputmode="decimal" min="0.5" max="100" step="0.5" placeholder="e.g. 30" required data-label="Capacity" data-suffix=" t" aria-describedby="t-capacity-err">
+                    <p class="error" id="t-capacity-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-date">Available from</label>
+                    <input class="input" id="t-date" name="date" type="date" required data-label="Available" data-min-today aria-describedby="t-date-err">
+                    <p class="error" id="t-date-err"></p>
+                  </div>
+                  <div class="field">
+                    <span class="label" id="t-return-l">Return load</span>
+                    <label class="flex min-h-[48px] cursor-pointer items-center gap-3 rounded-xl border-2 border-[#858B97] px-4">
+                      <input class="h-5 w-5 accent-[#1E5FD9]" type="checkbox" name="return" checked data-label="Return load wanted" data-yes="Yes, when available" data-no="No">
+                      <span class="text-sm">Also find me a load for the way back</span>
+                    </label>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-name">Your name</label>
+                    <input class="input" id="t-name" name="name" type="text" autocomplete="name" required data-label="Name" aria-describedby="t-name-err">
+                    <p class="error" id="t-name-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="t-phone">Phone / WhatsApp</label>
+                    <input class="input" id="t-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="07xx xxx xxx or +254…" required data-validate="phone" data-label="Phone" aria-describedby="t-phone-hint t-phone-err">
+                    <p class="hint" id="t-phone-hint">Kenyan (07xx / +254) or any country code, e.g. +256, +255, +234.</p>
+                    <p class="error" id="t-phone-err"></p>
+                  </div>
+                  <div class="field field-full">
+                    <label class="label" for="t-notes">Anything else? <span class="opt">(optional)</span></label>
+                    <textarea class="input" id="t-notes" name="notes" rows="3" placeholder="e.g. Can also go to Nakuru" data-label="Notes"></textarea>
+                  </div>
+                </div>
+                <button class="btn btn-wa btn-lg mt-6 w-full sm:w-auto" type="submit"><i data-icon="whatsapp"></i> Send on WhatsApp</button>
+                <p class="mt-3 text-xs text-sk-grey-600">This opens WhatsApp with your details filled in. Just press send.</p>
+                <div class="form-note" role="status" hidden data-form-note></div>
+              </form>
+            </div>
+          </div>
+
+          <!-- ---------- CARGO OWNERS ---------- -->
+          <div id="cargo" class="mt-6 scroll-mt-28" role="tabpanel" aria-labelledby="tab-cargo" tabindex="0" data-panel="cargo">
+            <div class="panel-form on-light">
+              <h3 class="h3">Tell us what you need to move</h3>
+              <p class="mt-2 text-sm">Any cargo, any route, any time. We'll connect you with a suitable truck.</p>
+
+              <form class="mt-6" novalidate data-wa-form="New CARGO request">
+                <div class="form-grid">
+                  <div class="field">
+                    <label class="label" for="c-pickup">Pickup location</label>
+                    <input class="input" id="c-pickup" name="pickup" type="text" placeholder="e.g. Dar es Salaam port, Tanzania" required data-label="Pickup" aria-describedby="c-pickup-err">
+                    <p class="error" id="c-pickup-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-delivery">Delivery location</label>
+                    <input class="input" id="c-delivery" name="delivery" type="text" placeholder="e.g. Lusaka, Zambia" required data-label="Delivery" aria-describedby="c-delivery-err">
+                    <p class="error" id="c-delivery-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-type">Cargo type</label>
+                    <input class="input" id="c-type" name="cargo" type="text" placeholder="e.g. Bagged cement, furniture" required data-label="Cargo" aria-describedby="c-type-err">
+                    <p class="error" id="c-type-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-weight">Weight / quantity</label>
+                    <input class="input" id="c-weight" name="weight" type="text" placeholder="e.g. 20 tonnes or 400 bags" required data-label="Weight / qty" aria-describedby="c-weight-err">
+                    <p class="error" id="c-weight-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-date">Preferred date</label>
+                    <input class="input" id="c-date" name="date" type="date" required data-label="Preferred date" data-min-today aria-describedby="c-date-err">
+                    <p class="error" id="c-date-err"></p>
+                  </div>
+                  <div class="field">
+                    <label class="label" for="c-name">Your name</label>
+                    <input class="input" id="c-name" name="name" type="text" autocomplete="name" required data-label="Name" aria-describedby="c-name-err">
+                    <p class="error" id="c-name-err"></p>
+                  </div>
+                  <div class="field field-full">
+                    <label class="label" for="c-phone">Phone / WhatsApp</label>
+                    <input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="07xx xxx xxx or +254…" required data-validate="phone" data-label="Phone" aria-describedby="c-phone-hint c-phone-err">
+                    <p class="hint" id="c-phone-hint">Kenyan (07xx / +254) or any country code, e.g. +256, +255, +234.</p>
+                    <p class="error" id="c-phone-err"></p>
+                  </div>
+                  <div class="field field-full">
+                    <label class="label" for="c-notes">Anything else? <span class="opt">(optional)</span></label>
+                    <textarea class="input" id="c-notes" name="notes" rows="3" placeholder="e.g. Needs a covered truck, loading help" data-label="Notes"></textarea>
+                  </div>
+                </div>
+                <button class="btn btn-wa btn-lg mt-6 w-full sm:w-auto" type="submit"><i data-icon="whatsapp"></i> Send on WhatsApp</button>
+                <p class="mt-3 text-xs text-sk-grey-600">This opens WhatsApp with your details filled in. Just press send.</p>
+                <div class="form-note" role="status" hidden data-form-note></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFITS ============ -->
+    <section class="section on-light" aria-labelledby="benefits-title">
+      <div class="container-sk grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div>
+                    <h2 id="benefits-title" class="h2 title-bar mt-4">Less empty running. <span class="hl">More earning.</span></h2>
+          <ul class="mt-8 space-y-4">
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>Return loads when available</strong>, so your truck works both ways.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>Save time and costs</strong>. We search, you keep driving.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>More opportunities</strong>. Any truck type, any route.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>Direct connections</strong>. You deal with the cargo owner or transporter directly.</span></li>
+            <li class="flex items-start gap-3"><span class="check mt-0.5"><i data-icon="check"></i></span><span><strong>One WhatsApp message</strong> is all it takes to start.</span></li>
+          </ul>
+        </div>
+        <div class="on-dark rounded-[16px] bg-sk-black p-7 sm:p-10">
+          <span class="icon-circle icon-circle-solid"><i data-icon="users"></i></span>
+          <h3 class="h3 mt-5">Join our <span class="hl">transporter network</span></h3>
+          <p class="mt-3 text-sk-grey-300">Own one truck or a fleet? Get on our list and we'll contact you when there's cargo on your routes. Reliable trucks. Consistent cargo. Long-term partnership.</p>
+          <a class="btn btn-wa btn-lg mt-6 w-full sm:w-auto" href="https://wa.me/{{WA_NUMBER}}?text=Hi%20Skylink%2C%20I%27d%20like%20to%20join%20your%20transporter%20network." target="_blank" rel="noopener"><i data-icon="whatsapp"></i> Join on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT WE MOVE ============ -->
+    <section class="section on-grey" aria-labelledby="move-title">
+      <div class="container-sk">
+        <h2 id="move-title" class="h2 title-bar">What we <span class="hl">move</span></h2>
+        <p class="lead measure mt-6">All cargo is accepted, as long as it is halal. These are the loads and trucks we work with most.</p>
+        <div class="mt-12 grid gap-12 lg:grid-cols-2">
+          <div>
+            <h3 class="h3">Cargo</h3>
+            <ul class="manifest mt-6 !grid-cols-1">
+              <li><i data-icon="wheat"></i><div><h3>Agricultural commodities</h3><p>Maize, wheat, millet, rice, sesame, groundnuts</p></div></li>
+              <li><i data-icon="brick-wall"></i><div><h3>Construction materials</h3><p>Cement, steel, paints, tools</p></div></li>
+              <li><i data-icon="heart-handshake"></i><div><h3>Humanitarian cargo</h3><p>Relief food and supplies for UN agencies and NGOs</p></div></li>
+              <li><i data-icon="shopping-basket"></i><div><h3>Manufactured goods and FMCG</h3><p>Maize flour, sugar, edible oils, beverages</p></div></li>
+              <li><i data-icon="sprout"></i><div><h3>Fertilizer</h3><p>Bagged fertilizer from Mombasa warehouses</p></div></li>
+              <li><i data-icon="mountain"></i><div><h3>Coal and bulk</h3><p>Tipper and coal-truck contracts</p></div></li>
+              <li><i data-icon="snowflake"></i><div><h3>Refrigerated cargo</h3><p>Meat and chilled goods in reefer containers</p></div></li>
+              <li><i data-icon="container"></i><div><h3>Containers and general cargo</h3><p>20ft and 40ft, books, household goods, kitchenware</p></div></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="h3">Trucks</h3>
+            <ul class="manifest mt-6 !grid-cols-1">
+              <li><i data-icon="container"></i><div><h3>40ft closed-body container trucks</h3></div></li>
+              <li><i data-icon="truck"></i><div><h3>Triaxle prime movers</h3><p>Including double-container trailers</p></div></li>
+              <li><i data-icon="snowflake"></i><div><h3>Refrigerated (reefer) trucks</h3></div></li>
+              <li><i data-icon="package"></i><div><h3>Cover bodies and high-sided trucks</h3></div></li>
+              <li><i data-icon="layers"></i><div><h3>Flatbeds and skeletons</h3></div></li>
+              <li><i data-icon="mountain"></i><div><h3>Tippers and coal trucks</h3><p>28 t capacity</p></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="ds section bg-sk-black" aria-labelledby="faq-title">
+      <div class="container-sk max-w-3xl">
+                <h2 id="faq-title" class="h2 title-bar mt-4">Transport questions</h2>
+        <div class="mt-8 space-y-3">
+          <details class="faq-item">
+            <summary>Do you own trucks?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>No. Skylink doesn't own trucks or sell goods. We connect cargo owners with transporters, and transporters with loads.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Which routes do you cover?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Any route across Africa, within one country or across borders. Nairobi ⇄ Mombasa, Mombasa ⇄ Kampala and Lagos ⇄ Abuja are just examples. Tell us your route and we'll search for you.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you guarantee a return load?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>No. We look for a return load on every request and connect you when one is available. Sharing your route early gives us the best chance.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What truck types can join?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Any type: flatbed, box body, tipper, container/trailer, refrigerated, tanker and more.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What does Skylink charge?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Our commission is 7% of the transport value of the load.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How are transporters paid?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Payment terms are set per load and shown before you accept it. On most of our loads it is 70% at loading and 30% after delivery; some loads pay 80% at loading and 20% at destination.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you offer long-term contracts?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Yes. Alongside single trips we post contract work, from 3 months to 5 years, for transporters who want consistent cargo. Some contracts start with a few trucks and scale up.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How do I get started?<i data-icon="chevron-down"></i></summary>
+            <div class="faq-body"><p>Fill in the form above or send us a WhatsApp message on {{WA_DISPLAY}}. Tell us where you are, where you're going, your truck type and when you're available.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!--@ cta -->

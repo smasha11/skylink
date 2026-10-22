@@ -1,0 +1,14 @@
+# Build dependencies (reinstall with: cd _build && npm install)
+_build/node_modules/
+
+# Design-process scratch: screenshots and temporary scripts
+.impeccable/review/
+.impeccable/tmp/
+.impeccable/questions/*.log
+.impeccable/questions/*.state.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

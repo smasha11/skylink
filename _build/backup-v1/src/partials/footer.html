@@ -1,0 +1,61 @@
+<footer class="border-t border-sk-gold/30 bg-sk-black pt-14 text-sm">
+    <div class="container-sk grid gap-10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+      <div>
+        <a href="{{BASE}}index.html" class="inline-block" aria-label="Skylink Global Network — home">
+          <!--@ logo -->
+        </a>
+        <p class="eyebrow mt-4 text-[0.65rem] text-sk-yellow sm:text-[0.7rem]">Business | Travel | Logistics | Opportunities</p>
+        <p class="mt-4 max-w-xs text-sk-grey-300">We simply connect the right people: transporters with loads, cargo owners with trucks, and buyers with verified suppliers.</p>
+        <a class="mt-5 inline-flex items-center gap-2 text-sk-white hover:text-sk-yellow" href="{{IG_URL}}" target="_blank" rel="noopener">
+          <span class="icon-circle icon-circle-sm"><i data-icon="instagram"></i></span>
+          @{{IG_HANDLE}}
+        </a>
+      </div>
+
+      <nav aria-label="Quick links">
+        <h2 class="eyebrow text-sk-grey-300">Quick links</h2>
+        <ul class="mt-4 space-y-1">
+          <li><a class="inline-flex min-h-[40px] items-center hover:text-sk-yellow" href="{{BASE}}index.html">Home</a></li>
+          <li><a class="inline-flex min-h-[40px] items-center hover:text-sk-yellow" href="{{BASE}}about.html">About us</a></li>
+          <li><a class="inline-flex min-h-[40px] items-center hover:text-sk-yellow" href="{{BASE}}contact.html">Contact</a></li>
+          <li><a class="inline-flex min-h-[40px] items-center hover:text-sk-yellow" href="{{BASE}}transport.html#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Services">
+        <h2 class="eyebrow text-sk-grey-300">Services</h2>
+        <ul class="mt-4 space-y-1">
+          <li><a class="inline-flex min-h-[40px] items-center hover:text-sk-yellow" href="{{BASE}}transport.html#trucks">Find loads for your truck</a></li>
+          <li><a class="inline-flex min-h-[40px] items-center hover:text-sk-yellow" href="{{BASE}}transport.html#cargo">Find a truck for your cargo</a></li>
+          <li><a class="inline-flex min-h-[40px] items-center hover:text-sk-yellow" href="{{BASE}}trade.html#buyers">Buyers: find suppliers</a></li>
+          <li><a class="inline-flex min-h-[40px] items-center hover:text-sk-yellow" href="{{BASE}}trade.html#suppliers">Suppliers: reach buyers</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="eyebrow text-sk-grey-300">Contact</h2>
+        <ul class="mt-4 space-y-3">
+          <li>
+            <a class="flex items-center gap-3 hover:text-sk-yellow" href="https://wa.me/{{WA_NUMBER}}" target="_blank" rel="noopener">
+              <span class="icon-circle icon-circle-sm"><i data-icon="whatsapp"></i></span> {{WA_DISPLAY}}
+            </a>
+          </li>
+          <li>
+            <!-- PLACEHOLDER: replace info@YOURDOMAIN.com with your real email (also in _build/build.mjs) -->
+            <a class="flex items-center gap-3 break-all hover:text-sk-yellow" href="mailto:{{EMAIL}}">
+              <span class="icon-circle icon-circle-sm"><i data-icon="mail"></i></span> {{EMAIL}}
+            </a>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="icon-circle icon-circle-sm"><i data-icon="map-pin"></i></span> Nairobi, Kenya
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gold-rule"></div>
+    <div class="container-sk flex flex-col gap-2 pb-24 pt-6 sm:pb-6 text-xs text-sk-grey-300 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-year>{{YEAR}}</span> Skylink Global Network. Nairobi, Kenya.</p>
+      <p>Real Connections. Real Movement.</p>
+    </div>
+  </footer>
