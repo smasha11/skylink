@@ -25,7 +25,7 @@ A human-run connection service, not a load board or marketplace app: the visitor
 
 ## Operating Context
 
-- Contact happens on WhatsApp (+254 757 710 635, wa.me/254757710635); forms only prepare a pre-filled WhatsApp message. Instagram: @skylink_global_network.
+- Contact happens on WhatsApp (+254 757 710 635, wa.me/254757710635); forms only prepare a pre-filled WhatsApp message. Instagram: @skylink_worldconnect (https://www.instagram.com/skylink_worldconnect). Facebook: https://www.facebook.com/share/1CYXqvKrsz/.
 - Example corridor used in marketing: Nairobi ⇄ Mombasa (Load 1 out, Load 2 back), but coverage is any route across Africa, within one country or across borders.
 - Verified supplier connections today: tiles, sanitary ware, rice and spices from India. Categories: steel, hardware, mechanical, electrical & plumbing, building/construction materials, industrial products, furniture and other wholesale.
 

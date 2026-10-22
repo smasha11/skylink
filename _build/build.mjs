@@ -20,8 +20,9 @@ const SITE = {
   EMAIL: 'info@YOURDOMAIN.com',       // PLACEHOLDER: your real email
   WA_NUMBER: '254757710635',
   WA_DISPLAY: '+254 757 710 635',
-  IG_HANDLE: 'skylink_global_network',
-  IG_URL: 'https://instagram.com/skylink_global_network',
+  IG_HANDLE: 'skylink_worldconnect',
+  IG_URL: 'https://www.instagram.com/skylink_worldconnect',
+  FB_URL: 'https://www.facebook.com/share/1CYXqvKrsz/',
   YEAR: String(new Date().getFullYear()),
   VERSION: Date.now().toString(36), // cache-buster for CSS/JS, changes on every build
 };
