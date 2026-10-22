@@ -520,6 +520,11 @@
     border-block: 3px double rgba(245,163,0,.7);
   }
 
+  /* ---- Testimonials: the quote sits under a double rule, like the message bands ---- */
+  .testimonial { @apply relative flex flex-col pt-6; border-top: 7px double var(--sk-yellow); }
+  .testimonial blockquote p { @apply text-lg font-medium leading-relaxed text-sk-white; }
+  .testimonial-flag { @apply mb-4 self-start rounded-full border border-sk-orange/80 px-2.5 py-0.5 text-xs font-semibold text-sk-orange; }
+
   /* ---- Load cards: real loads from the user's posters ---- */
   .load-grid { @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3; }
   .load-card {
@@ -612,4 +617,7 @@
 [data-theme="light"] .ds .load-route svg { color: #0A0A0A; }
 [data-theme="light"] .ds .load-lane { background: #0A0A0A; }
 [data-theme="light"] .ds .load-facts dd { color: #0A0A0A; }
+[data-theme="light"] .ds .testimonial { border-top-color: #0A0A0A; }
+[data-theme="light"] .ds .testimonial blockquote p { color: #0A0A0A; }
+[data-theme="light"] .ds .testimonial-flag { border-color: #B45309; color: #B45309; }
 
